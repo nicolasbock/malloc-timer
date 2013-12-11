@@ -8,4 +8,6 @@ main (int argc, char **argv)
 {
   malloc_test();
   calloc_test();
+
+  return 0;
 }
