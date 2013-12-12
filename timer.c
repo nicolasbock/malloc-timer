@@ -31,7 +31,8 @@ timer_print(const char *const name,
 {
   double elapsed_time = timer_get(start_time, end_time);
 
-  printf("%s took %e seconds, %e seconds / allocation of %d bytes\n",
+  printf("%s took %e seconds, %e seconds / allocation, "
+      "%e allocations / second, allocated %d bytes\n",
       name, elapsed_time, elapsed_time/(double) REPETITIONS,
-      BUFFER_SIZE);
+      REPETITIONS/elapsed_time, BUFFER_SIZE);
 }
